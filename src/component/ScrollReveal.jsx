@@ -17,7 +17,7 @@ const ScrollReveal = ({children}) => {
 
     },[])
   return (
-    <div ref = {ref} className={`transition-all duration-700 ease-out opacity-0 translate-y-10 ${visible?'opacity-100 translate-y-0':''}`} >{children}</div>
+    <div ref = {ref} className={`transition-all duration-600 ease-in-out opacity-0 translate-y-10 ${visible?'opacity-100 translate-y-0':''}`} >{children}</div>
   )
 }
 
