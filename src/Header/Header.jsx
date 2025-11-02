@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-15 before:absolute before:content-[""] before:w-screen before:h-screen  before:bg-black  ${showMenu||showInput?'before:z-20 before:top-0 before-left-0 before:opacity-80 ':'before:-z-100 before:-left-full before:opacity-0 '} ${color?'bg-gray-600':'bg-transparent'} transition-all duration-300 ease-in-out `}>
-      <nav className='flex gap-x-5 items-center bg-gray-600 lg:bg-transparent  ' >
+      <nav className='flex gap-x-5 items-center bg-gray-600 lg:bg-transparent overflow-y-auto ' >
         <div className='text-white flex flex-row lg:flex-col items-center gap-x-2 lg:bg-red-500 py-5 lg:py-2 px-5  '  >
           <a className='flex text-2xl lg:text-5xl' href="#"><GiThreeFriends /></a>
           <a className='flex text-lg lg:text-xl font-bold lg:font-semibold tracking-widest lg:tracking-[4px]' href="#">CHARITY</a> 
@@ -35,7 +35,7 @@ const Header = () => {
         </ul>
 
        
-          <ul className={`flex lg:hidden flex-col items-center justify-center absolute z-100  top-40 gap-y-5 text-xl font-semibold transition-all duration-300 ease-in-out text-white ${showMenu?'left-1/2 transform -translate-x-1/2':'-left-full'} w-4/5`} >
+          <ul className={`flex lg:hidden flex-col items-center justify-center absolute z-100 top-full md:top-40 gap-y-5 text-xl font-semibold transition-all duration-300 ease-in-out text-white ${showMenu?'left-1/2 transform -translate-x-1/2':'-left-full'} w-4/5`} >
 
           <li onClick={()=>{setShowMenu(false)}} className=' w-full flex justify-center' ><a className='text-3xl' href="#"><RxCross2 /></a></li>
           <li className='border-b-2 border-gray-700 w-full flex justify-center py-1 ' ><a href="#">HOME</a></li>
@@ -52,7 +52,7 @@ const Header = () => {
          <button onClick={()=>{setShowMenu(!showMenu)}} className='flex lg:hidden text-2xl font-bold text-white'><RxHamburgerMenu /></button>
        </div>
 
-        <div className={`flex items-center justify-center  absolute  z-20 top-75 w-9/10  lg:w-2/5 border-b-4 border-white ${showInput?'left-1/2 transform -translate-x-1/2':'transform translate -left-full'}`}>
+        <div className={`flex items-center justify-center  absolute  z-20 top-40 md:top-75  w-9/10  lg:w-2/5 border-b-4 border-white ${showInput?'left-1/2 transform -translate-x-1/2':'transform translate -left-full'}`}>
           <input className='w-9/10 px-4 py-3 outline-0 border-0 text-xl sm:text-3xl text-white font-semibold ' type="text" placeholder='Search...' />
           <button className='text-2xl sm:text-3xl text-white '><IoSearch /></button>
           <button onClick={()=>{
