@@ -5,7 +5,7 @@ import children from '../assets/children.jpg'
 const Hero = () => {
   return (
     <section className='relative z-10' >
-      <div className='min-h-screen bg-gray-200 bg-[url("C:\Users\lenovo\OneDrive\Desktop\React\charitydonation\src\assets\community.jpg")] bg-cover bg-center flex flex-col items-center justify-center relative '>
+      <div className='min-h-screen bg-gray-200 bg-cover bg-center flex flex-col items-center justify-center relative ' style={{backgroundImage:"url('https://plus.unsplash.com/premium_photo-1733266905110-eab44e3aed74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170')"}} >
         <div className='flex justify-center text-6xl text-white font-bold ' >
           <LuWaves />
         </div>
