@@ -9,7 +9,7 @@ const ScrollReveal = ({children}) => {
                 setVisible(true)
                 observer.unobserve(entry.target)
             }
-        },{threshold:0.2})
+        },{threshold:0.1})
 
         if(ref.current)
             observer.observe(ref.current) ;
