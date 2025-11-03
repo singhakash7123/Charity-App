@@ -1,73 +1,80 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GiThreeFriends } from "react-icons/gi";
 import { IoSearch } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { RxCross2 } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx";
 const Header = () => {
   const[showMenu,setShowMenu] = useState(false)
   const[showInput,setShowInput] = useState(false)
-  const[color,serColor] = useState(false)
+  const[visible,setVisible] = useState(false)
+  const[color,setColor] = useState(false)
   const ChangeColor = () =>{
     if(window.scrollY>=400){
-      serColor(true)
+      setColor(true)
+     setVisible(true)
     }
     else{
-      serColor(false)
+      setColor(false)
+      setVisible(false)
     }
   }
+
+  useEffect(()=>{
+    if(showMenu){
+      document.body.style.overflow = 'hidden'
+    }
+    else{
+      document.body.style.overflow = 'auto'
+    }
+  },[showMenu])
  
    window.addEventListener('scroll',ChangeColor)
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-15 before:absolute before:content-[""] before:w-screen before:h-screen  before:bg-black  ${showMenu||showInput?'before:z-20 before:top-0 before-left-0 before:opacity-80 ':'before:-z-100 before:-left-full before:opacity-0 '} ${color?'bg-gray-600':'bg-transparent'} transition-all duration-300 ease-in-out `}>
-      <nav className='flex gap-x-5 items-center bg-gray-600 lg:bg-transparent overflow-y-auto ' >
-        <div className='text-white flex flex-row lg:flex-col items-center gap-x-2 lg:bg-red-500 py-5 lg:py-2 px-5  '  >
-          <a className='flex text-2xl lg:text-5xl' href="#"><GiThreeFriends /></a>
-          <a className='flex text-lg lg:text-xl font-bold lg:font-semibold tracking-widest lg:tracking-[4px]' href="#">CHARITY</a> 
-        </div>
-        <ul className='hidden lg:flex items-center gap-x-15 font-bold text-[16px] tracking-[3px] text-white' >
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">PAGES</a></li>
-          <li><a href="#">OUR CAUSES</a></li>
-          <li><a href="#">CASE STUDIES</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">FEATURES</a></li>
-        </ul>
+    <header className={`fixed top-0 left-0 right-0 transition-all z-50 duration-300 ease-in-out after:w-full after:h-screen after:absolute after:top-0 after:-left-full after:bg-black after:opacity-70 ${showMenu||showInput?'after:left-0':''}  ${color?'bg-gray-600 ':'bg-transparent'}  `}>
+      <nav className={`flex  items-center gap-x-10 pr-5 xl:pr-15 py-3 bg-gray-700 lg:bg-transparent  `} >
+              <div className='flex gap-2 xl:flex-col items-center justify-center text-white p-3 xl:p-5 xl:bg-red-500 '>
+                <div className=' text-3xl xl:text-4xl'><GiThreeFriends /></div>
+                <h1 className='tracking-[5px] font-normal '>CHARITI</h1>
+              </div>
+              <ul className=' hidden lg:flex items-center gap-x-5  xl:gap-x-15 text-lg font-bold text-white '>
+                <li><a href="#"></a>HOME</li> 
+                <li><a href="#"></a>PAGES</li>
+                <li><a href="#"></a>OUR CAUSES</li>
+                <li><a href="#"></a>CASE STUDIES</li>
+                <li><a href="#"></a>BLOG</li>
+                <li><a href="#"></a>FEATURES</li>
+              </ul>
+              <ul className={`lg:hidden flex flex-col items-center gap-5   text-lg font-bold overflow-y-auto-auto text-white absolute top-full -left-full w-full py-5 px-5 transition-all duration-300 ease-in-out z-50  ${showMenu?'left-0':'-left-full'}`}>
+                <button onClick={()=>{setShowMenu(false)}} className='text-2xl'><RxCross1 /></button>
+                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>HOME</li>
+                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>PAGES</li>
+                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>OUR CAUSES</li>
+                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>CASE STUDIES</li>
+                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>BLOG</li>
+                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>FEATURES</li>
+              </ul>
+      
+              <button onClick={()=>{setShowInput(true)}} className='text-2xl text-white ml-auto lg:ml-0'>
+                <IoSearch />
+              </button>
+              <button onClick={()=>{setShowMenu(!showMenu)}} className='flex lg:hidden text-2xl text-white'>
+                <RxHamburgerMenu />
+              </button>
 
-       
-          <ul className={`flex lg:hidden flex-col items-center mt-5
-             absolute z-100  top-40 gap-y-5 text-xl font-semibold transition-all duration-300 ease-in-out text-white ${showMenu?'left-1/2 transform -translate-x-1/2':'-left-full'} w-4/5`} >
-
-          <li onClick={()=>{setShowMenu(false)}} className=' w-full flex justify-center' ><a className='text-3xl' href="#"><RxCross2 /></a></li>
-          <li className='border-b-2 border-gray-700 w-full flex justify-center py-1 ' ><a href="#">HOME</a></li>
-          <li className='border-b-2 border-gray-700 w-full flex justify-center py-1 ' ><a href="#">PAGES</a></li>
-          <li className='border-b-2 border-gray-700 w-full flex justify-center py-1 ' ><a href="#">OUR CAUSES</a></li>
-          <li className='border-b-2 border-gray-700 w-full flex justify-center py-1 ' ><a href="#">CASE STUDIES</a></li>
-          <li className='border-b-2 border-gray-700 w-full flex justify-center py-1 ' ><a href="#">BLOG</a></li>
-          <li className='border-b-2 border-gray-700 w-full flex justify-center py-1 ' ><a href="#">FEATURES</a></li>
-          </ul>
-        
-
-       <div className='flex gap-x-5 items-center ml-auto lg:ml-0 pr-6'>
-         <button onClick={()=>{setShowInput(!showInput)}} className='flex items-center text-2xl lg:text-3xl font-bold text-white' ><IoSearch /></button>
-         <button onClick={()=>{setShowMenu(!showMenu)}} className='flex lg:hidden text-2xl font-bold text-white'><RxHamburgerMenu /></button>
-       </div>
-
-        <div className={`flex items-center justify-center  absolute  z-20 top-75  w-9/10  lg:w-2/5 border-b-4 border-white ${showInput?'left-1/2 transform -translate-x-1/2':'transform translate -left-full'}`}>
-          <input className='w-9/10 px-4 py-3 outline-0 border-0 text-xl sm:text-3xl text-white font-semibold ' type="text" placeholder='Search...' />
-          <button className='text-2xl sm:text-3xl text-white '><IoSearch /></button>
-          <button onClick={()=>{
-            setShowInput(!showInput);
-            
-          }} className='font-bold text-white text-2xl sm:text-3xl ml-5' ><RxCross2 /></button>
-        </div>
-
-        <div className='hidden xl:flex gap-x-4 items-center ml-auto px-20'>
-          <button className=' py-2 px-10 rounded-xl text-white text-xl font-bold bg-blue-600' >Donate</button>
-          <button className=' py-2 px-10 rounded-xl text-white text-xl font-bold bg-red-600' >Volunteer</button>
-        </div>
-      </nav>
-    </header> 
+                <div className={`flex items-center justify-center text-white text-2xl absolute  z-50 transform  top-0 gap-x-3 max-w-[768px] w-9/10 h-screen ${showInput?'left-1/2 -translate-x-1/2 ':'-left-full'} transition-all ease-in-out duration-300 `}>
+                  <input className='w-4/5 border-b-2 border-b-white text-white outline-0 ' type="text" placeholder='Search' />
+                  <button><IoSearch /></button>
+                  <button onClick={()=>{setShowInput(false)}} ><RxCross1 /></button>
+                </div>
+              
+              <div className=' hidden xl:flex items-center gap-3 ml-auto  ' > 
+               <button className='font-bold py-3 px-6 text-white text-xl bg-red-500'>Donate</button>
+               <button className='font-bold py-3 px-6 text-white text-xl bg-blue-800'>Volunteer</button>
+              </div>
+      
+            </nav>
+    </header>
   )
 }
 
