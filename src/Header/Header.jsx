@@ -45,7 +45,7 @@ const Header = () => {
                 <li><a href="#"></a>BLOG</li>
                 <li><a href="#"></a>FEATURES</li>
               </ul>
-              <ul className={`lg:hidden flex flex-col items-center gap-5   text-lg font-bold overflow-y-auto text-white absolute top-full -left-full w-full py-5 px-5 transition-all duration-300 ease-in-out z-50   ${showMenu?'left-0 h-[75vh]':'-left-full h-0 '}`}>
+              <ul className={`lg:hidden flex flex-col items-center gap-5   text-lg font-bold overflow-y-auto text-white absolute top-full -left-full w-full py-5 px-5 transition-all duration-300 ease-in-out z-50   ${showMenu?'left-0 max-h-[75vh]':'-left-full max-h-0 '}`}>
                 <button onClick={()=>{setShowMenu(false)}} className='text-2xl'><RxCross1 /></button>
                 <li className='border-b-white border-b-2  text-center  '><a href="#"></a>HOME</li>
                 <li className='border-b-white border-b-2  text-center  '><a href="#"></a>PAGES</li>
