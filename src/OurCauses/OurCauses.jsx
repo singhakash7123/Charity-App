@@ -8,7 +8,7 @@ const OurCauses = () => {
          <div className='text-7xl'>
          
          </div>
-         <h1 className='text-4xl md:text-5xl xl:text-7xl font-extrabold' >Cause List - Thumbnail Overlay</h1>
+         <h1 className='text-4xl md:text-5xl xl:text-7xl text-center font-extrabold' >Cause List - Thumbnail Overlay</h1>
          <h2 className=' text-xl xl:text-2xl font-semibold text-center mt-6 xl:mt-13 mb-5 xl:mb-13 tracking-widest text-violet-300'>EXAMPLE OF CAUSE LIST </h2>
         
         </div>
