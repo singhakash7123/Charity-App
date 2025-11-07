@@ -3,6 +3,7 @@ import { GiThreeFriends } from "react-icons/gi";
 import { IoSearch } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 const Header = () => {
   const[showMenu,setShowMenu] = useState(false)
   const[showInput,setShowInput] = useState(false)
@@ -38,21 +39,21 @@ const Header = () => {
                 <h1 className='tracking-[5px] font-normal '>CHARITI</h1>
               </div>
               <ul className=' hidden lg:flex items-center gap-x-5  xl:gap-x-15 text-lg font-bold text-white '>
-                <li><a href="#"></a>HOME</li> 
-                <li><a href="#"></a>PAGES</li>
-                <li><a href="#"></a>OUR CAUSES</li>
-                <li><a href="#"></a>CASE STUDIES</li>
-                <li><a href="#"></a>BLOG</li>
-                <li><a href="#"></a>FEATURES</li>
+                <li ><Link to={'/'} >HOME</Link></li> 
+                <li ><Link  >PAGES</Link></li>
+                <li ><Link to={'/causes'} >OUR CAUSES</Link></li>
+                <li ><Link to={'/casestudies'} >CASE STUDIES</Link></li>
+                <li ><Link to={'/news'} >BLOG</Link></li>
+                <li ><Link  >FEATURES</Link></li>
               </ul>
               <ul className={`lg:hidden flex flex-col items-center gap-5   text-lg font-bold overflow-y-auto text-white absolute top-full -left-full w-full py-5 px-5 transition-all duration-300 ease-in-out z-50   ${showMenu?'left-0 max-h-[75vh]':'-left-full max-h-0 '}`}>
                 <button onClick={()=>{setShowMenu(false)}} className='text-2xl'><RxCross1 /></button>
-                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>HOME</li>
-                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>PAGES</li>
-                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>OUR CAUSES</li>
-                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>CASE STUDIES</li>
-                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>BLOG</li>
-                <li className='border-b-white border-b-2  text-center  '><a href="#"></a>FEATURES</li>
+                <li onClick={()=>{setShowMenu(false)}} className='border-b-white border-b-2  text-center  '><Link to={'/'}>HOME</Link></li>
+                <li onClick={()=>{setShowMenu(false)}} className='border-b-white border-b-2  text-center  '><Link>PAGES</Link></li>
+                <li onClick={()=>{setShowMenu(false)}} className='border-b-white border-b-2  text-center  '><Link to={'/causes'}>OUR CAUSES</Link></li>
+                <li onClick={()=>{setShowMenu(false)}} className='border-b-white border-b-2  text-center  '><Link to={'/casestudies'}>CASE STUDIES</Link></li>
+                <li onClick={()=>{setShowMenu(false)}} className='border-b-white border-b-2  text-center  '><Link to={'/news'}>BLOG</Link></li>
+                <li onClick={()=>{setShowMenu(false)}} className='border-b-white border-b-2  text-center  '><Link>FEATURES</Link></li>
               </ul>
       
               <button onClick={()=>{setShowInput(true)}} className='text-2xl text-white ml-auto lg:ml-0'>

@@ -1,50 +1,45 @@
-import React from 'react'
-import Hero from './HomePage/Hero'
-import Header from './Header/Header'
-import Causes from './HomePage/Causes'
-import Story from './HomePage/Story'
-import Footer from './Footer/Footer'
-import Gallery from './HomePage/Gallery'
-import Blog from './NewsAndUpdates/Blog'
-import Agenda from './HomePage/Agenda'
-import Staff from './Staff/Staff'
-import ScrollReveal from './component/ScrollReveal'
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./HomePage/Home";
+
+import NewsBlog from "./NewsAndUpdates/NewsBlog";
+import Layout from "./Layout";
+
+import OurCauses from "./OurCauses/OurCauses";
+import CaseStudies from "./CaseStudies/CaseStudies";
 
 const App = () => {
- 
-  return (
-    <>
-    <Header/>
-   <Hero/>
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout/>,
 
-   <ScrollReveal>
+      children:[
+        {
+          path: "/",
+      element: <Home/>,
+        },
+        {
+          path: "/news",
+      element: <NewsBlog/>,
+        },
+        {
+          path: "/causes",
+      element: <OurCauses/>,
+        },
+        {
+          path: "/casestudies",
+      element: <CaseStudies/>,
+        },
+      ]
+    },
+    
+  ],
+  {
+    basename:'/Donation-App'
+  }
+);
+  return <RouterProvider router={router} />;
+};
 
-   <Causes/>
-   </ScrollReveal>
-    <ScrollReveal>
-
-   <Story/>
-   </ScrollReveal>
-   <ScrollReveal>
-
-   <Blog/>
-   </ScrollReveal>
-    <ScrollReveal>
-
-   <Staff/>
-   </ScrollReveal>
-   <ScrollReveal>
-
-   <Agenda/>
-   </ScrollReveal>
-    <ScrollReveal>
-
-   <Gallery/>
-   </ScrollReveal>
-
-   <Footer/>
-    </>
-  )
-}
-
-export default App
+export default App;
