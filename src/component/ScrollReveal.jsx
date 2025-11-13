@@ -1,6 +1,6 @@
 import React, { Children, useState, useRef, useEffect } from 'react'
 
-const ScrollReveal = ({children}) => {
+const ScrollReveal = ({children,thresvalue}) => {
     const ref = useRef()
     const [visible, setVisible] = useState(false)
     useEffect (()=>{
@@ -9,7 +9,7 @@ const ScrollReveal = ({children}) => {
                 setVisible(true)
                 observer.unobserve(entry.target)
             }
-        },{threshold:0.05})
+        },{threshold:thresvalue})
 
         if(ref.current)
             observer.observe(ref.current) ;

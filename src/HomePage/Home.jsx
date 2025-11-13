@@ -7,7 +7,6 @@ import Story from './Story'
 import Gallery from './Gallery'
 import Staff from './Staff'
 import ScrollReveal from '../component/ScrollReveal'
-import Footer from '../Footer/Footer'
 import Blog from './Blog'
 const Home = () => {
   return (
@@ -15,27 +14,27 @@ const Home = () => {
     <Header/>
    <Hero/>
 
-   <ScrollReveal>
+   <ScrollReveal threshold={0} >
    <Causes/>
    </ScrollReveal>
 
-    <ScrollReveal>
+    <ScrollReveal threshold={0.05} >
    <Story/>
    </ScrollReveal>
 
-   <ScrollReveal>
+   <ScrollReveal threshold={0.05} >
    <Blog/>
    </ScrollReveal>
 
-    <ScrollReveal>
+    <ScrollReveal threshold={0.05} >
    <Staff/>
    </ScrollReveal>
 
-   <ScrollReveal>
+   <ScrollReveal threshold={0.05} >
    <Agenda/>
    </ScrollReveal>
 
-    <ScrollReveal>
+    <ScrollReveal threshold={0.05} >
    <Gallery/>
    </ScrollReveal>
     </>
