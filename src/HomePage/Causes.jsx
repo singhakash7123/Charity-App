@@ -5,7 +5,22 @@ import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlinePlayCircle } from "react-icons/md";
 import causeImage from '../assets/causesimage.jpg'
 import CauseComponent from './CauseComponent';
+import causearray from '../ContentArray/CauseInfo'
+
 const Causes = () => {
+  
+  const CauseImg = () => {
+   return causearray.map((item)=>{
+     return <CauseComponent heading={item.heading}
+      donated={item.donated}
+      goal={item.goal}
+      percentage={item.percentage}
+      image={item.image}
+      key={item.id}/>
+   }
+   )
+  }
+
   return (
     <section className=''>
         <div className='lg:max-w-9/10 lg:ml-auto'>
@@ -42,14 +57,11 @@ const Causes = () => {
         </div>
        
        </div>
-       <div className='flex justify-center items-center flex-wrap mt-20 gap-x-8' >
-        <CauseComponent/>
-        <CauseComponent/>
-        <CauseComponent/>
-        
-       </div>
-      
         </div>
+      <div className='flex flex-col lg:flex-row lg:justify-between items-center lg:flex-wrap mt-20 gap-x-4 gap-y-5 w-screen bg-gray-100 ' >
+        {CauseImg()}
+       </div>
+
     </section>
   )
 }

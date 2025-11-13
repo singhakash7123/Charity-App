@@ -15,19 +15,19 @@ const Gallery = () => {
     </div>
 
         <div className='flex flex-col lg:flex-row items-center  min-h-[400px] mt-22 '>
-            <div className=' max-w-[500px] w-full aspect-square bg-green-400 ' >
+            <div className=' w-full aspect-16/9 lg:aspect-square bg-green-400 ' >
                 <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1527788263495-3518a5c1c42d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRvbmF0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="" />
             </div>
-            <div className=' max-w-[500px] w-full aspect-square bg-red-400 ' >
+            <div className=' w-full aspect-16/9 lg:aspect-square bg-red-400 ' >
                 <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1506869673173-31eba16560ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGRvbmF0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="" />
             </div>
-            <div className=' max-w-[500px] w-full aspect-square bg-yellow-400 ' >
+            <div className=' w-full aspect-16/9 lg:aspect-square bg-yellow-400 ' >
                 <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRvbmF0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="" />
             </div>
-            <div className=' max-w-[500px] w-full aspect-square bg-blue-400 ' >
+            <div className=' w-full aspect-16/9 lg:aspect-square bg-blue-400 ' >
                 <img className='w-full h-full object-cover' src="https://plus.unsplash.com/premium_photo-1661775322183-bf9d38cff431?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRvbmF0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="" />
             </div>
-            <div className=' max-w-[500px] w-full aspect-square bg-cyan-400 ' >
+            <div className=' w-full aspect-16/9 lg:aspect-square bg-cyan-400 ' >
                 <img className='w-full h-full object-cover' src="https://plus.unsplash.com/premium_photo-1683134050449-080429c850a4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZG9uYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="" />
             </div>
             
