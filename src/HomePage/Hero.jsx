@@ -1,10 +1,10 @@
 import React from 'react'
-import background from '../assets/background.jpg'
+import background from '../assets/community.jpg'
 import { PiWindFill } from "react-icons/pi";
 
 const Hero = () => {
   return (
-    <section className='w-screen bg-cover bg-center min-h-screen text-white flex flex-col items-center justify-center relative mt-15 xl:mt-0 pb-10 ' style={{backgroundImage:`url(${background})`}}>
+    <section className='w-screen bg-cover bg-center min-h-[65vh] lg:min-h-screen text-white flex flex-col items-center justify-center relative mt-15 xl:mt-0 pb-10 ' style={{backgroundImage:`url(${background})`}}>
      <div className='text-7xl'>
      <PiWindFill />
      </div>

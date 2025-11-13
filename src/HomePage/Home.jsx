@@ -38,8 +38,6 @@ const Home = () => {
     <ScrollReveal>
    <Gallery/>
    </ScrollReveal>
-
-   <Footer/>
     </>
   )
 }

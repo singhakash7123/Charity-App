@@ -7,7 +7,7 @@ import causeImage from '../assets/causesimage.jpg'
 import CauseComponent from './CauseComponent';
 const Causes = () => {
   return (
-    <section className='mt-10'>
+    <section className=''>
         <div className='lg:max-w-9/10 lg:ml-auto'>
         
        <div className='flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 justify-between 

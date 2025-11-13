@@ -7,6 +7,7 @@ import Layout from "./Layout";
 
 import OurCauses from "./OurCauses/OurCauses";
 import CaseStudies from "./CaseStudies/CaseStudies";
+import ScrollToTop from "./component/ScrollToTop";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -40,6 +41,7 @@ const App = () => {
   }
 );
   return <RouterProvider router={router} />;
+  
 };
 
 export default App;

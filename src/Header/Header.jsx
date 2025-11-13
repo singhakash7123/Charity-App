@@ -33,12 +33,12 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 transition-all z-50 duration-300 ease-in-out after:w-full after:h-screen after:absolute after:top-0 after:-left-full after:bg-black after:opacity-70 ${showMenu||showInput?'after:left-0':''}  ${color?'bg-gray-600 ':'bg-transparent'}  `}>
-      <nav className={`flex  items-center gap-x-10 pr-5 xl:pr-15 py-1 bg-gray-700 lg:bg-transparent  `} >
+      <nav className={`flex  items-center gap-x-10 pr-5 xl:pr-15 py-1 bg-gray-700 xl:bg-transparent  `} >
               <div className='flex gap-2 xl:flex-col items-center justify-center text-white p-3 xl:p-5 xl:bg-red-500 '>
                 <div className=' text-3xl xl:text-4xl'><GiThreeFriends /></div>
                 <h1 className='tracking-[5px] font-normal '>CHARITI</h1>
               </div>
-              <ul className=' hidden lg:flex items-center gap-x-5  xl:gap-x-15 text-lg font-bold text-white '>
+              <ul className=' hidden lg:flex items-center gap-x-5 lg:gap-x-10  xl:gap-x-15 text-lg font-bold text-white '>
                 <li ><Link to={'/'} >HOME</Link></li> 
                 <li ><Link  >PAGES</Link></li>
                 <li ><Link to={'/causes'} >OUR CAUSES</Link></li>
