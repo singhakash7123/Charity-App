@@ -14,27 +14,27 @@ const Home = () => {
     <Header/>
    <Hero/>
 
-   <ScrollReveal threshold={0} >
+   <ScrollReveal thresvalue={0} >
    <Causes/>
    </ScrollReveal>
 
-    <ScrollReveal threshold={0.05} >
+    <ScrollReveal thresvalue={0.05} >
    <Story/>
    </ScrollReveal>
 
-   <ScrollReveal threshold={0.05} >
+   <ScrollReveal thresvalue={0.05} >
    <Blog/>
    </ScrollReveal>
 
-    <ScrollReveal threshold={0.05} >
+    <ScrollReveal thresvalue={0.05} >
    <Staff/>
    </ScrollReveal>
 
-   <ScrollReveal threshold={0.05} >
+   <ScrollReveal thresvalue={0.05} >
    <Agenda/>
    </ScrollReveal>
 
-    <ScrollReveal threshold={0.05} >
+    <ScrollReveal thresvalue={0.05} >
    <Gallery/>
    </ScrollReveal>
     </>
