@@ -44,7 +44,7 @@ const App = () => {
     
   ],
   {
-    basename:'/Donation-App'
+    basename:'/Charity-App'
   }
 );
   return <RouterProvider router={router} />;
