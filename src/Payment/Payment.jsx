@@ -20,7 +20,7 @@ const RenderPaymentType = paymenttype.map((payitem,index)=>{
 })
   return (
    
-    <section className='min-h-screen bg-gradient-to-tr from-blue-100 to-blue-200 flex flex-col items-center py-8  '>
+    <section className='min-h-screen bg-gradient-to-tr from-blue-100 to-blue-200 flex flex-col items-center py-8 px-5 '>
        <Scrolltotop/>
       {/* heading */}
       <div className='max-w-[600px] w-full mt-15 '>
