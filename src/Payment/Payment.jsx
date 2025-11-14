@@ -20,13 +20,13 @@ const RenderPaymentType = paymenttype.map((payitem,index)=>{
 })
   return (
    
-    <section className='min-h-screen bg-gradient-to-tr from-blue-100 to-blue-200 flex flex-col items-center py-8 px-5 '>
+    <section className='min-h-screen bg-gradient-to-tr from-blue-100 to-blue-200 flex flex-col items-center py-8 '>
        <Scrolltotop/>
       {/* heading */}
       <div className='max-w-[600px] w-full mt-15 '>
       <h3 className='flex justify-center' ><span className='text-3xl p-4 rounded-full text-white bg-gradient-to-br from-blue-500 to-blue-600'><FaHeart /></span></h3>
       <h5 className='text-center text-[14px] mt-5'>Make a Difference Today</h5>
-      <h6 className='text-center text-[14px] mt-1'>Your generous donation helps us continue our misson and create lasting impact</h6>
+      <h6 className='text-center text-[14px] mt-1 px-5'>Your generous donation helps us continue our misson and create lasting impact</h6>
       </div>
 
       {/* donation types */}
