@@ -58,7 +58,7 @@ const Causes = () => {
        
        </div>
         </div>
-      <div className='flex flex-col lg:flex-row lg:justify-between items-center lg:flex-wrap mt-20 gap-y-5 w-screen bg-gray-100 ' >
+      <div className='flex flex-col lg:flex-row lg:justify-between items-center lg:items-stretch  mt-20 gap-y-5 gap-x-3 w-screen bg-gray-100 ' >
         {CauseImg()}
        </div>
 
