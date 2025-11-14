@@ -7,8 +7,8 @@ const CauseComponent = ({heading,donated,percentage,goal,image}) => {
   console.log(goal);
  
   return (
-    <div className='max-w-[600px] lg:max-w-[500px] w-full bg-white px-5 pb-15 pt-2 lg:p-5 flex flex-col rounded-lg' >
-    <img src={image} alt="" className='w-full aspect-square bg-amber-200 object-cover ' />
+    <div className=' lg:max-w-[500px] w-full bg-white px-5 pb-15 pt-2 lg:p-5 flex flex-col rounded-lg' >
+    <img src={image} alt="" className='w-full aspect-16/9 lg:aspect-square bg-amber-200 object-cover ' />
       <h3 className='mt-8 font-extrabold text-blue-800 text-[22px] lg:text-[28px]'>{heading}</h3>
       <span className=' font-bold text-gray-300 flex mt-6 text-[17px] '>{donated.toLocaleString('fr-FR', {
   style: 'currency',
