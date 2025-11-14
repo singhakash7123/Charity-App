@@ -6,7 +6,7 @@ import { MdOutlinePlayCircle } from "react-icons/md";
 import causeImage from '../assets/causesimage.jpg'
 import CauseComponent from './CauseComponent';
 import causearray from '../ContentArray/CauseInfo'
-
+import { Link } from 'react-router-dom';
 const Causes = () => {
   
   const CauseImg = () => {
@@ -51,7 +51,7 @@ const Causes = () => {
         </div>
         <p className='text-white mt-6 font-light lg:text-2xl' >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates architecto quae iusto nemo amet minima, impedit provident fugiat adipisci aut quibusdam enim unde eligendi dignissimos nulla accusamus expedita tenetur excepturi odio culpa! Voluptate laudantium aspernatur eum delectus iste, aperiam culpa.</p>
         <div className='flex items-center justify-between mt-6' >
-          <button className='bg-orange-600 text-bold tracking-wider text-white py-2 px-4 font-bold lg:text-xl rounded-xl'>Donate Now</button>
+          <Link to={'/payment'} className='bg-orange-600 text-bold tracking-wider text-white py-2 px-4 font-bold lg:text-xl rounded-xl'>Donate Now</Link>
           <button className='text-xl' ><FaRegHeart /></button>
         </div>
         </div>

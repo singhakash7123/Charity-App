@@ -70,8 +70,8 @@ const Header = () => {
                 </div>
               
               <div className=' hidden xl:flex items-center gap-3 ml-auto  ' > 
-               <button className='font-bold py-3 px-6 text-white text-xl bg-red-500'>Donate</button>
-               <button className='font-bold py-3 px-6 text-white text-xl bg-blue-800'>Volunteer</button>
+               <Link to={'/payment'} className='font-bold py-3 px-6 text-white text-xl bg-red-500'>Donate</Link>
+               <Link to={'/'} className='font-bold py-3 px-6 text-white text-xl bg-blue-800'>Volunteer</Link>
               </div>
       
             </nav>

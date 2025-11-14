@@ -7,11 +7,17 @@ import Layout from "./Layout";
 
 import OurCauses from "./OurCauses/OurCauses";
 import CaseStudies from "./CaseStudies/CaseStudies";
-import ScrollToTop from "./component/ScrollToTop";
+
+import Payment from "./Payment/Payment";
 
 const App = () => {
   const router = createBrowserRouter([
     {
+       path:"/payment",
+        element:<Payment/>,
+    },
+    {
+
       path: "/",
       element: <Layout/>,
 
@@ -32,6 +38,7 @@ const App = () => {
           path: "/casestudies",
       element: <CaseStudies/>,
         },
+        
       ]
     },
     
