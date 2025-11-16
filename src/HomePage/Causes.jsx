@@ -10,13 +10,15 @@ import { Link } from 'react-router-dom';
 const Causes = () => {
   
   const CauseImg = () => {
-   return causearray.map((item)=>{
+   return causearray.slice(0,3).map((item)=>{
      return <CauseComponent heading={item.heading}
       donated={item.donated}
       goal={item.goal}
       percentage={item.percentage}
       image={item.image}
-      key={item.id}/>
+      key={item.id}
+      progress={item.percentage}
+      />
    }
    )
   }
