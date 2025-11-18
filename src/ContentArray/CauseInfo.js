@@ -1,9 +1,9 @@
-import blogimg1 from '../assets/blogimg4.jpg'
-import causeimg1 from '../assets/causeimage1.jpg'
-import causeimg2 from '../assets/causeimage2.jpg'
-import causeimg3 from '../assets/causeimage3.jpg'
-import causeimg4 from '../assets/causeimage4.jpg'
-import causeimg5 from '../assets/causeimage5.jpg'
+import blogimg1 from '../assets/blogimg4.avif'
+import causeimg1 from '../assets/causeimage1.avif'
+import causeimg2 from '../assets/causeimage2.avif'
+import causeimg3 from '../assets/causeimage3.avif'
+import causeimg4 from '../assets/causeimage4.avif'
+import causeimg5 from '../assets/causeimage5.avif'
     const causearray = [
 
     {

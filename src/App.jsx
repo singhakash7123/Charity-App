@@ -1,42 +1,53 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./HomePage/Home";
+const Home = lazy(()=>import("./HomePage/Home"))
+const NewsBlog = lazy(()=>import("./NewsAndUpdates/NewsBlog"))
+const Layout = lazy(()=>import("./Layout"))
+const OurCauses = lazy(()=>import("./OurCauses/OurCauses"))
+const CaseStudies = lazy(()=>import("./CaseStudies/CaseStudies"))
+const Payment = lazy(()=>import("./Payment/Payment"))
 
-import NewsBlog from "./NewsAndUpdates/NewsBlog";
-import Layout from "./Layout";
-
-import OurCauses from "./OurCauses/OurCauses";
-import CaseStudies from "./CaseStudies/CaseStudies";
-
-import Payment from "./Payment/Payment";
 
 const App = () => {
   const router = createBrowserRouter([
     {
        path:"/payment",
-        element:<Payment/>,
+       
+        element:(<Suspense fallback={<div className="text-center" >Loading...</div>}>
+          <Payment/>
+        </Suspense>),
     },
     {
 
       path: "/",
-      element: <Layout/>,
+      element: (<Suspense fallback={<div className="text-center" >Loading...</div>}>
+          <Layout/>
+        </Suspense>) ,
 
       children:[
         {
           path: "/",
-      element: <Home/>,
+      element: (<Suspense fallback={<div className="text-center" >Loading...</div>}>
+         <Home/>
+        </Suspense>) ,
         },
         {
           path: "/news",
-      element: <NewsBlog/>,
+      element:(<Suspense fallback={<div className="text-center" >Loading...</div>}>
+        <NewsBlog/>
+        </Suspense>) ,
         },
         {
           path: "/causes",
-      element: <OurCauses/>,
+      element:(<Suspense fallback={<div className="text-center" >Loading...</div>}>
+        <OurCauses/>
+        </Suspense>) ,
         },
         {
           path: "/casestudies",
-      element: <CaseStudies/>,
+      element:(<Suspense fallback={<div className="text-center" >Loading...</div>}>
+        <CaseStudies/>
+        </Suspense>) ,
         },
         
       ]

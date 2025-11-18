@@ -1,8 +1,8 @@
-import img1 from '../assets/blogimg1.jpg'
-import img2 from '../assets/blogimg2.jpg'
-import img3 from '../assets/blogimg3.jpg'
-import img4 from '../assets/blogimg4.jpg'
-import img5 from '../assets/blogimg5.jpg'
+import img1 from '../assets/blogimg1.avif'
+import img2 from '../assets/blogimg2.avif'
+import img3 from '../assets/blogimg3.avif'
+import img4 from '../assets/blogimg4.avif'
+import img5 from '../assets/blogimg5.avif'
 const blogarray = [
 {
 image:img1,

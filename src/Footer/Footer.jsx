@@ -7,6 +7,9 @@ import { FaInstagram } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { SlEnvelopeOpen } from "react-icons/sl";
 import { IoIosArrowForward } from "react-icons/io";
+import footerimg1 from '../assets/footerimg1.avif'
+import footerimg2 from '../assets/footerimg2.avif'
+import footerimg3 from '../assets/blogimg4.avif'
 const Footer = () => {
   return (
     <footer className='min-h-[700px] bg-gray-800 relative flex lg:flex-row flex-col px-20 xl:px-30 pb-[160px] lg:pb-[120px] pt-20 gap-x-9 gap-y-15 lg:gap-y-0 w-screen '>
@@ -47,7 +50,7 @@ const Footer = () => {
         <div className='flex-1  bg-gray-800  ' >
             <h3 className='font-bold text-xl lg:text-2xl text-white '>Urgent Causes</h3>
             <div className='flex items-center gap-x-3 mt-5'>
-                <div className='w-25 lg:w-18 xl:w-24 xl:h-24 h-25 lg:h-18 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGNoYXJpdHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="" /></div>
+                <div className='w-25 lg:w-18 xl:w-24 xl:h-24 h-25 lg:h-18 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src={footerimg1} alt="" /></div>
                 <div className='w-full' >
                     <h4 className='text-white font-medium text-[15px] lg:text-[16px] xl:text-[22px] ' >Second Hand Goods Donation</h4>
                     <div className='h-2 bg-green-300 mt-2 mb-2'></div>
@@ -55,7 +58,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='flex items-center gap-x-3 mt-5'>
-                <div className='w-25 lg:w-18 h-25 lg:h-18 xl:w-24 xl:h-24 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNoYXJpdHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="" /></div>
+                <div className='w-25 lg:w-18 h-25 lg:h-18 xl:w-24 xl:h-24 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src={footerimg2} alt="" /></div>
                 <div className='w-full' >
                     <h4 className='text-white font-medium  text-[15px] lg:text-[16px] xl:text-[22px] ' >Education Needed</h4>
                     <div className='h-2 bg-green-300 mt-2 mb-2'></div>
@@ -63,7 +66,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='flex items-center gap-x-3 mt-5'>
-                <div className='w-25 lg:w-18 h-25 lg:h-18 xl:w-24 xl:h-24 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhcml0eXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="" /></div>
+                <div className='w-25 lg:w-18 h-25 lg:h-18 xl:w-24 xl:h-24 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src={footerimg3} alt="" /></div>
                 <div className='w-full' >
                     <h4 className='text-white font-medium  text-[15px] lg:text-[16px] xl:text-[22px] ' >Save Child Africa</h4>
                     <div className='h-2 bg-green-300 mt-2 mb-2'></div>

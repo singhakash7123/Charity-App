@@ -3,7 +3,7 @@ import Heading from '../Headings/Heading'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlinePlayCircle } from "react-icons/md";
-import causeImage from '../assets/causesimage.jpg'
+import causeImage from '../assets/causesimage.avif'
 import CauseComponent from './CauseComponent';
 import causearray from '../ContentArray/CauseInfo'
 import { Link } from 'react-router-dom';
