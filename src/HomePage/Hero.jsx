@@ -4,7 +4,7 @@ import { PiWindFill } from "react-icons/pi";
 
 const Hero = () => {
   return (
-    <section className='w-screen h-[70vh] lg:h-screen text-white  relative mt-15 xl:mt-0  '>
+    <section className='w-screen h-[70vh] md:h-screen text-white  relative mt-15 xl:mt-0  '>
       <img src={background} className='object-cover h-full w-full' loading='lazy' fetchPriority='high' alt="" />
        <div className='absolute inset-0  flex flex-col items-center justify-center '>
       <div className='text-7xl'>
