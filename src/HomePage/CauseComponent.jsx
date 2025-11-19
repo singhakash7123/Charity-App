@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import ProgressBar from '../ProgressBar/ProgressBar';

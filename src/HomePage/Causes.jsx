@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Heading from '../Headings/Heading'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";

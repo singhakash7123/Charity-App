@@ -1,9 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+
 import background from '../assets/background.avif'
-import { CiClock2 } from "react-icons/ci";
-import { IoMdPerson } from "react-icons/io";
-import { FaTag } from "react-icons/fa6";
+
 import { IoIosArrowForward } from "react-icons/io";
 import info from '../ContentArray/BlogInfo'
 import NewsBlogComponent from './NewsBlogComponent';

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ProgressBar from '../ProgressBar/ProgressBar';
 import { FaRegHeart } from "react-icons/fa6";
 const CauseElement = ({heading,donated,percentage,goal,image}) => {

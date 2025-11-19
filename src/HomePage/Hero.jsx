@@ -1,11 +1,13 @@
 import React from 'react'
-import background from '../assets/community.jpg'
+import background from '../assets/community.avif'
 import { PiWindFill } from "react-icons/pi";
 
 const Hero = () => {
   return (
-    <section className='w-screen bg-cover bg-center min-h-[65vh] lg:min-h-screen text-white flex flex-col items-center justify-center relative mt-15 xl:mt-0 pb-10 ' style={{backgroundImage:`url(${background})`}}>
-     <div className='text-7xl'>
+    <section className='w-screen h-[70vh] lg:h-screen text-white  relative mt-15 xl:mt-0  '>
+      <img src={background} className='object-cover h-full w-full' loading='lazy' fetchPriority='high' alt="" />
+       <div className='absolute inset-0  flex flex-col items-center justify-center '>
+      <div className='text-7xl'>
      <PiWindFill />
      </div>
      <h1 className='text-4xl md:text-5xl xl:text-7xl font-extrabold' >Home is Life</h1>
@@ -15,6 +17,8 @@ const Hero = () => {
       <button className='w-3 h-3 rounded-full bg-white outline-offset-2 outline-solid  '></button>
       <button className='w-3 h-3 rounded-full bg-white outline-offset-2 outline-solid  '></button>
      </div>
+     </div>
+
     </section>
 
 

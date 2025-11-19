@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Heading from '../Headings/Heading'
 import HeadingButton from '../Headings/HeadingButton'
 import Newsimg1 from '../assets/Newsimg1.jpg'

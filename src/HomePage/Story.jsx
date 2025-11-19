@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa";

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { GiThreeFriends } from "react-icons/gi";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
