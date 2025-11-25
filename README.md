@@ -1,3 +1,41 @@
+# NGO Portal / Charity Donation Web App
+
+A web application built for NGOs to accept donations, manage volunteers, and track donation history.
+
+## Features
+
+- React + Vite frontend  
+- Payment gateway integration (Razorpay)  
+- Planned: Database integration for donation tracking  
+- Future: Volunteer management, reporting dashboard
+
+## Tech Stack
+
+- **Frontend:** React, Vite  
+- **Backend:**  Node.js / Express / …  
+- **Payment:**  Razorpay  
+- **Database:** MYSQL
+
+## Installation
+
+```bash
+git clone https://github.com/K-S-Patel/NGO-Portal.git
+# Frontend
+cd charity  
+npm install  
+npm run dev
+
+# Backend
+cd backend  
+npm install 
+node server.js
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
