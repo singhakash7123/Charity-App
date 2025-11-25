@@ -1,0 +1,33 @@
+# Node dependencies
+node_modules/
+
+# Environment variables file
+.env
+.env.*  # (optional: ignore .env.local, .env.production etc.)
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / dist files (if you build your code)
+dist/
+build/
+
+# Coverage reports (if you run tests)
+coverage/
+.nyc_output/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# Misc
+*.pid
+*.seed

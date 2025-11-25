@@ -1,25 +1,94 @@
+
+
 import React, { useState } from 'react'
 import { FaHeart } from "react-icons/fa6";
 import Scrolltotop from '../component/ScrollToTop';
 
-
 const Payment = () => {
-const[donated,setDonated] = useState(0)
-const[paytype,setPaytype] = useState('')
-  const amount = [25,50,100,250,500,1000]
-  const paymenttype = ['One Time', 'Monthly']
-const RenderAmount = amount.map((item,index)=>{
-  return(
-    <button onClick={()=>{setDonated(item)}} key={index}  className=' flex justify-center w-[30%] py-2 text-sm font-medium border-1 border-gray-200 rounded-lg hover:bg-black hover:text-white transition-all duration-300 ease-in-out '>${item}</button>
-  )
-})
-const RenderPaymentType = paymenttype.map((payitem,index)=>{
-  return(
-     <button onClick={()=>{setPaytype(payitem)}} key={index} className={`flex-1 text-center py-2 border-2 border-blue-400 rounded-xl font-semibold text-[16px] ${paytype === payitem?'bg-blue-300 text-white':'bg-white'} `}>{payitem}</button>
-  )
-})
+  const [donated, setDonated] = useState(0);
+  const [paytype, setPaytype] = useState('');
+  const amount = [25,50,100,250,500,1000];
+  const paymenttype = ['One Time', 'Monthly'];
+
+  const RenderAmount = amount.map((item,index)=>{
+    return(
+      <button
+        key={index}
+        onClick={() => setDonated(Number(item))}
+        className='flex justify-center w-[30%] py-2 text-sm font-medium border-1 border-gray-200 rounded-lg hover:bg-black hover:text-white transition-all duration-300 ease-in-out'
+      >
+        ₹{item}
+      </button>
+    )
+  })
+
+  const RenderPaymentType = paymenttype.map((payitem,index)=>{
+    return(
+       <button onClick={()=>{setPaytype(payitem)}} key={index} className={`flex-1 text-center py-2 border-2 border-blue-400 rounded-xl font-semibold text-[16px] ${paytype === payitem?'bg-blue-300 text-white':'bg-white'} `}>{payitem}</button>
+    )
+  })
+
+  // backend Route for payment
+  const createOrder = async (amount) => {
+    try {
+      const res = await fetch("http://localhost:5000/api/payment/create-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ amount }),
+      });
+
+      const data = await res.json();
+      return data.order;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDonate = async () => {
+    if (!donated || donated <= 0) {
+      alert("Please select or enter a valid amount");
+      return;
+    }
+
+    console.log("donated (rupees) being sent to backend:", donated);
+
+    // STEP 1: Create order from backend
+    const order = await createOrder(donated);
+    if (!order) {
+      alert("Order creation failed");
+      return;
+    }
+
+    // STEP 2: Prepare Razorpay options
+    const options = {
+      key: "rzp_test_RgUja1rFjsxYfL", // <-- Replace with your Razorpay Key ID if needed
+      amount: order.amount,          // order.amount is in paise (backend set amount*100)
+      currency: order.currency || "INR",
+      name: "Charity Donation",
+      description: "Donation Payment",
+      order_id: order.id, // important
+
+      handler: function (response) {
+        alert("Payment Success!");
+
+        console.log("Payment ID:", response.razorpay_payment_id);
+        console.log("Order ID:", response.razorpay_order_id);
+        console.log("Signature:", response.razorpay_signature);
+      },
+
+      theme: {
+        color: "#3399cc",
+      },
+    };
+
+    // STEP 3: Open Razorpay popup
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+  };
+
   return (
-   
     <section className='min-h-screen bg-gradient-to-tr from-blue-100 to-blue-200 flex flex-col items-center py-8 '>
        <Scrolltotop/>
       {/* heading */}
@@ -49,11 +118,18 @@ const RenderPaymentType = paymenttype.map((payitem,index)=>{
       <div className='mt-3'>
         <label className='text-[14px] font-medium  ' htmlFor="amount">Enter Amount</label>
         <br />
-        <input onChange={(e)=>{setDonated(e.target.value)}} className='bg-gray-300 w-full py-2 rounded-lg outline-0 px-3 text-xs ' type="number" name="amount" id="amount" />
+        <input
+          value={donated}
+          onChange={(e) => setDonated(Number(e.target.value))}
+          className='bg-gray-300 w-full py-2 rounded-lg outline-0 px-3 text-xs'
+          type="number"
+          name="amount"
+          id="amount"
+        />
       </div>
       </div>
 
-        {/* userdata */}
+      {/* userdata */}
 
       <div className='max-w-[600px] w-full mt-7 bg-white p-5 rounded-xl ' >
       <p className='text-[14px] font-medium '>Your information</p>
@@ -113,9 +189,9 @@ const RenderPaymentType = paymenttype.map((payitem,index)=>{
       <div className='max-w-[600px] w-full mt-7 p-5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 ' >
         <div className='flex justify-between items-center text-white'>
           <span>Total Donation</span>
-          <span className='text-2xl'>${donated}</span>
+          <span className='text-2xl'>₹{donated}</span>
         </div>
-        <button className='flex w-full justify-center font-medium bg-white py-1 text-purple-500 rounded-lg mt-5'>Complete Donation</button>
+        <button onClick={handleDonate} className='flex w-full justify-center font-medium bg-white py-1 text-purple-500 rounded-lg mt-5'>Complete Donation</button>
       </div>
 
       <p className='text-center text-gray-400 mt-6'>By completing this donation you are agree to our terms and condition</p>
