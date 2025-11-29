@@ -4,6 +4,7 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FaChildren } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 const Story = () => {
   return (
     <section className='mt-20' >
@@ -19,7 +20,7 @@ const Story = () => {
                 </div>
                 <h2 className=' text-4xl lg:text-5xl text-white font-semibold mt-5 tracking-wider ' >Who We are?</h2>
                 <p className='text:lg lg:text-xl text-gray-300 mt-8' >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem minus, consequuntur libero nesciunt doloribus molestias eius consectetur eum modi inventore aut aspernatur laborum, mollitia labore non dolores eveniet, tempora rem quasi numquam? Commodi praesentium cum id harum quos repellat repellendus.</p>
-                <button className='flex items-center gap-x-3 text-white font-semibold text-xl lg:text-2xl bg-blue-800 px-5 lg:px-8 py-2 lg:py-3 mt-12'>Learn More <div className=' font-bold text-3xl' ><IoIosArrowRoundForward /></div> </button>
+                <Link to={'/news'} className=' flex items-center gap-x-3 w-fit text-white font-semibold text-xl lg:text-2xl bg-blue-800 px-5 lg:px-8 py-2 lg:py-3 mt-12'>Learn More <div className=' font-bold text-3xl' ><IoIosArrowRoundForward /></div> </Link>
             </div>
         </div>
         <div className='flex  items-stretch  w-screen' >
@@ -31,7 +32,7 @@ const Story = () => {
                 </div>
                 <h2 className=' text-4xl lg:text-5xl text-white font-semibold mt-5 tracking-wider ' >Why Choose Us?</h2>
                 <p className='text:lg lg:text-xl text-gray-300 mt-8' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi repellendus rerum perspiciatis, quo ea inventore delectus fuga corporis sequi qui obcaecati facilis neque debitis facere expedita quaerat aut id, quibusdam dolorem quam enim? Quis obcaecati natus quae doloremque non! Earum.</p>
-                <button className='flex items-center gap-x-3 text-blue-800 font-semibold text-xl lg:text-2xl bg-white px-5 lg:px-8 py-2 lg:py-3 mt-12'>Learn More <div className=' font-bold text-3xl text-red-400' ><IoIosArrowRoundForward /></div> </button>
+                <Link to={'/news'} className='flex items-center gap-x-3  w-fit text-blue-800 font-semibold text-xl lg:text-2xl bg-white px-5 lg:px-8 py-2 lg:py-3 mt-12'>Learn More <div className=' font-bold text-3xl text-red-400' ><IoIosArrowRoundForward /></div> </Link>
             </div>
             <div className='w-full hidden md:block  bg-red-300'>
                 <img className='w-full h-full object-cover '  src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNoYXJpdHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="" />
