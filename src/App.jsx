@@ -5,7 +5,9 @@ const NewsBlog = lazy(()=>import("./NewsAndUpdates/NewsBlog"))
 const Layout = lazy(()=>import("./Layout"))
 const OurCauses = lazy(()=>import("./OurCauses/OurCauses"))
 const CaseStudies = lazy(()=>import("./CaseStudies/CaseStudies"))
+
 const Payment = lazy(()=>import("./Payment/Payment"))
+const Login = lazy(()=>import("./Login/Login"))
 
 
 const App = () => {
@@ -15,6 +17,13 @@ const App = () => {
        
         element:(<Suspense fallback={<div className="text-center" >Loading...</div>}>
           <Payment/>
+        </Suspense>),
+    },
+    {
+       path:"/Login",
+       
+        element:(<Suspense fallback={<div className="text-center" >Loading...</div>}>
+          <Login/>
         </Suspense>),
     },
     {
