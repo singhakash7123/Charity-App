@@ -6,8 +6,8 @@ const Staff = () => {
   return (
     <div  className='flex flex-col items-center mt-20 md:px-0 '>
       <div className='max-w-[1400px] w-full flex flex-col md:flex-row gap-y-5 md:gap-y-0 items-center px-10 ' >
-       <div className='w-full flex justify-start items-center'> <Heading content={'OurStaff'} /> </div>
-       <div className='w-full flex justify-end items-center'> <HeadingButton content={'More Staff'} /> </div>
+       <div className='w-full flex justify-center items-center'> <Heading content={'OurStaff'} /> </div>
+       
        
       </div>
 

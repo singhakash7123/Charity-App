@@ -41,7 +41,7 @@ const Header = () => {
       <nav className={`flex  items-center gap-x-10 pr-5 xl:pr-15 py-1 bg-gray-700 xl:bg-transparent  `} >
               <div className='flex gap-2 xl:flex-col items-center justify-center text-white p-3 xl:p-5 xl:bg-red-500 '>
                 <div className=' text-3xl xl:text-4xl'><GiThreeFriends /></div>
-                <h1 className='tracking-[5px] font-normal '>CHARITI</h1>
+                <h1 className='tracking-[5px] font-normal '>SAMARTHAN</h1>
               </div>
               <ul className=' hidden lg:flex items-center gap-x-5 lg:gap-x-10  xl:gap-x-15 text-lg font-bold text-white '>
                 <li ><Link to={'/'} >HOME</Link></li> 

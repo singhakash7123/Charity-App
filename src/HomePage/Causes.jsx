@@ -44,14 +44,14 @@ const Causes = () => {
          <div className='min-h-[400px] bg-gradient-to-tr from-blue-800 to-blue-500 w-full
         lg:basis-11/20 p-[32px]
         lg:p-[48px] text-white ' >
-        <h2 className='text-4xl font-bold' >Providing access to safe water,sanitation, and hygiene </h2>
+        <h2 className='text-4xl font-bold' >Providing access of clean clothes, sanitised goods and essentials to needy peoples </h2>
         <span className=' flex font-bold text-red-500 mt-6'>$45,278.00</span>
         <div className='w-full h-2 bg-red-500 mt-2' ></div>
         <div className='flex items-center justify-between mt-3 font-bold tracking-wide '>
           <span>150% Donation</span>
           <span>Goal:$30,000.00</span>
         </div>
-        <p className='text-white mt-6 font-light lg:text-2xl' >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates architecto quae iusto nemo amet minima, impedit provident fugiat adipisci aut quibusdam enim unde eligendi dignissimos nulla accusamus expedita tenetur excepturi odio culpa! Voluptate laudantium aspernatur eum delectus iste, aperiam culpa.</p>
+        <p className='text-white mt-6 font-light lg:text-2xl' >providing access to clean clothes for all weathers to people living in slum area for their healh comfort and dignity. Many of them lack seasonal clothesto cover their body from environmental issue. our motive to provide them the basic facility to survive </p>
         <div className='flex items-center justify-between mt-6' >
           <Link to={'/payment'} className='bg-orange-600 text-bold tracking-wider text-white py-2 px-4 font-bold lg:text-xl rounded-xl'>Donate Now</Link>
           <button className='text-xl' ><FaRegHeart /></button>

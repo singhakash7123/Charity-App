@@ -19,7 +19,7 @@ const Story = () => {
                 <div className='w-7 h-1 bg-red-400 mt-5 '></div>
                 </div>
                 <h2 className=' text-4xl lg:text-5xl text-white font-semibold mt-5 tracking-wider ' >Who We are?</h2>
-                <p className='text:lg lg:text-xl text-gray-300 mt-8' >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem minus, consequuntur libero nesciunt doloribus molestias eius consectetur eum modi inventore aut aspernatur laborum, mollitia labore non dolores eveniet, tempora rem quasi numquam? Commodi praesentium cum id harum quos repellat repellendus.</p>
+                <p className='text:lg lg:text-xl text-gray-300 mt-8' >An oragnization having a vision of making a diffence in the lives of people living in poor situation and needed of basic necessities. we help them uplift into their life by providing them the essential things like hygiene, clothes and utensils</p>
                 <Link to={'/news'} className=' flex items-center gap-x-3 w-fit text-white font-semibold text-xl lg:text-2xl bg-blue-800 px-5 lg:px-8 py-2 lg:py-3 mt-12'>Learn More <div className=' font-bold text-3xl' ><IoIosArrowRoundForward /></div> </Link>
             </div>
         </div>
@@ -31,7 +31,7 @@ const Story = () => {
                 <div className='w-7 h-1 bg-red-400 mt-5 '></div>
                 </div>
                 <h2 className=' text-4xl lg:text-5xl text-white font-semibold mt-5 tracking-wider ' >Why Choose Us?</h2>
-                <p className='text:lg lg:text-xl text-gray-300 mt-8' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi repellendus rerum perspiciatis, quo ea inventore delectus fuga corporis sequi qui obcaecati facilis neque debitis facere expedita quaerat aut id, quibusdam dolorem quam enim? Quis obcaecati natus quae doloremque non! Earum.</p>
+                <p className='text:lg lg:text-xl text-gray-300 mt-8' >Having a great initiative and purpose to make life better for those who are lacking with basic necessity and having a clear cut goal to provide them  to get better life. Oue organisation is clean and transparent to everyone. ti's completely fair with no unequility at any cost</p>
                 <Link to={'/news'} className='flex items-center gap-x-3  w-fit text-blue-800 font-semibold text-xl lg:text-2xl bg-white px-5 lg:px-8 py-2 lg:py-3 mt-12'>Learn More <div className=' font-bold text-3xl text-red-400' ><IoIosArrowRoundForward /></div> </Link>
             </div>
             <div className='w-full hidden md:block  bg-red-300'>

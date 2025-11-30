@@ -10,23 +10,24 @@ import { IoIosArrowForward } from "react-icons/io";
 import footerimg1 from '../assets/footerimg1.avif'
 import footerimg2 from '../assets/footerimg2.avif'
 import footerimg3 from '../assets/blogimg4.avif'
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className='min-h-[700px] bg-gray-800 relative flex lg:flex-row flex-col px-20 xl:px-30 pb-[160px] lg:pb-[120px] pt-20 gap-x-9 gap-y-15 lg:gap-y-0 w-screen '>
         <div className='flex-1 bg-gray-800 text-white flex flex-col items-start  ' >
            
                 <div className='flex flex-col items-center gap-y-2'>
-            <a className='text-2xl xl:text-4xl ' href="#"><GiThreeFriends /></a>
-            <a className='text-2xl xl:text-4xl tracking-wider ' href="#">CHARITY</a>
+            <Link to={'/'} className='text-2xl xl:text-4xl ' href="#"><GiThreeFriends /></Link>
+            <Link to={'/'} className='text-2xl xl:text-4xl tracking-wider ' href="#">SAMARTHAN</Link>
             </div>
             
             
            <p className='mt-8 mb-10 text-[14px] lg:text-[16px] xl:text-xl px-2 max-w-[520px] '>Towards The end of 19th century, with the advent of new Liberalism and the innovation</p>
            <div className='xl:w-4/5  flex gap-x-10 flex-wrap text-white justify-center '>
-            <a className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaFacebook /></a>
-            <a className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaLinkedin /></a>
-            <a className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaXTwitter /></a>
-            <a className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaInstagram /></a>
+            <Link to={'/'} className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaFacebook /></Link>
+            <Link to={'/'} className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaLinkedin /></Link>
+            <Link to={'/'} className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaXTwitter /></Link>
+            <Link to={'/'} className='text-lg lg:text-2xl xl:text-[28px] ' href="#"><FaInstagram /></Link>
            </div>
         </div>
         <div className='flex-1  bg-gray-800  ' >
@@ -53,7 +54,7 @@ const Footer = () => {
                 <div className='w-25 lg:w-18 xl:w-24 xl:h-24 h-25 lg:h-18 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src={footerimg1} alt="" /></div>
                 <div className='w-full' >
                     <h4 className='text-white font-medium text-[15px] lg:text-[16px] xl:text-[22px] ' >Second Hand Goods Donation</h4>
-                    <div className='h-2 bg-green-300 mt-2 mb-2'></div>
+                    <div className='h-2 bg-green-300 mt-2 mb-2 w-[30%]'></div>
                     <p className='text-[14px] xl:text-[15px] font-bold text-white '>30% Donated</p>
                 </div>
             </div>
@@ -61,7 +62,7 @@ const Footer = () => {
                 <div className='w-25 lg:w-18 h-25 lg:h-18 xl:w-24 xl:h-24 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src={footerimg2} alt="" /></div>
                 <div className='w-full' >
                     <h4 className='text-white font-medium  text-[15px] lg:text-[16px] xl:text-[22px] ' >Education Needed</h4>
-                    <div className='h-2 bg-green-300 mt-2 mb-2'></div>
+                    <div className='h-2 bg-green-300 mt-2 mb-2 w-[92%] '></div>
                     <p className='text-[14px] xl:text-[15px] font-bold text-white '>92% Donated</p>
                 </div>
             </div>
@@ -69,7 +70,7 @@ const Footer = () => {
                 <div className='w-25 lg:w-18 h-25 lg:h-18 xl:w-24 xl:h-24 shrink-0 bg-red-400' ><img className='w-full h-full object-cover' src={footerimg3} alt="" /></div>
                 <div className='w-full' >
                     <h4 className='text-white font-medium  text-[15px] lg:text-[16px] xl:text-[22px] ' >Save Child Africa</h4>
-                    <div className='h-2 bg-green-300 mt-2 mb-2'></div>
+                    <div className='h-2 bg-green-300 mt-2 mb-2 w-[51%]'></div>
                     <p className='text-[14px] xl:text-[15px] font-bold text-white '>51% Donated</p>
                 </div>
             </div>
