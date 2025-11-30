@@ -45,7 +45,7 @@ Follow these steps to run the project locally:
 git clone https://github.com/K-S-Patel/NGO-Portal.git  
 
 # 2. Install and run the frontend  
-cd NGO-Portal/charity  
+cd charity-App  
 npm install  
 npm run dev  
 
