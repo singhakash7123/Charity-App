@@ -87,7 +87,7 @@ const RenderPaymentType = paymenttype.map((payitem,index)=>{
       <p className='text-[14px] text-gray-600 mt-2 '>Your payment is secure and encrypted</p>
 
       <div className='mt-3'>
-        <label className='text-[14px] font-semibold' htmlFor="cardnumber">Email Address</label>
+        <label className='text-[14px] font-semibold' htmlFor="cardnumber">Card Number</label>
           <br />
           <input className='w-full bg-gray-300 rounded-lg px-3 outline-0 text-xs py-2' type="number" name="cardnumber" id="cardnumber" />
       </div>
