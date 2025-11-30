@@ -163,21 +163,18 @@ const Payment = () => {
       </div>
 
       {/* card info */}
-      <div className='max-w-[600px] w-full mt-7 bg-white p-5 rounded-xl '>
-        <p className='text-[14px] font-medium'>Payment information</p>
-        <p className='text-[14px] text-gray-600 mt-2'>Your payment is secure and encrypted</p>
+      
+      
 
-<<<<<<< HEAD
       <div className='max-w-[600px] w-full mt-7 bg-white p-5 rounded-xl ' >
       <p className='text-[14px] font-medium '>Payment information</p>
       <p className='text-[14px] text-gray-600 mt-2 '>Your payment is secure and encrypted</p>
-
+     
       <div className='mt-3'>
         <label className='text-[14px] font-semibold' htmlFor="cardnumber">Card Number</label>
-=======
         <div className='mt-3'>
           <label className='text-[14px] font-semibold' htmlFor="cardnumber">Email Address</label>
->>>>>>> f013ea4be1ecc5cbcb54f9511b61cce58239bb53
+
           <br />
           <input className='w-full bg-gray-300 rounded-lg px-3 outline-0 text-xs py-2' type="number" name="cardnumber" id="cardnumber" />
         </div>
@@ -199,6 +196,7 @@ const Payment = () => {
           <input className='w-full bg-gray-300 rounded-lg px-3 outline-0 text-xs py-2' type="number" name="number" id="number" />
         </div>
       </div>
+       </div>
 
       <div className='max-w-[600px] w-full mt-7 p-5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 '>
         <div className='flex justify-between items-center text-white'>
