@@ -64,7 +64,7 @@ const Payment = () => {
     // STEP 2: Prepare Razorpay options
     const options = {
       key: "rzp_test_RgUja1rFjsxYfL", // <-- Replace with your Razorpay Key ID if needed
-      amount: order.amount,          // order.amount is in paise (backend set amount*100)
+      amount: order.amount,          
       currency: order.currency || "INR",
       name: "Charity Donation",
       description: "Donation Payment",
