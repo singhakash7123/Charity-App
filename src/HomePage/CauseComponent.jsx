@@ -1,7 +1,8 @@
-import React from 'react'
+
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-const CauseComponent = ({heading,donated,percentage,goal,image}) => {
+import ProgressBar from '../ProgressBar/ProgressBar';
+const CauseComponent = ({heading,donated,percentage,goal,image,progress}) => {
  
  
   return (
@@ -12,7 +13,7 @@ const CauseComponent = ({heading,donated,percentage,goal,image}) => {
   style: 'currency',
   currency: 'USD'
 })}</span>
-      <div className='h-2 bg-green-300 mt-2 mb-2 '></div>
+     <ProgressBar value={progress} />
       <div className='flex w-full items-center justify-between' >
         <span className='flex text-[17px] font-bold text-black '>{percentage}% Donated</span>
         <span className='flex text-[17px] font-bold text-gray-300 '>{goal.toLocaleString('fr-FR', {

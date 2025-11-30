@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { GiThreeFriends } from "react-icons/gi";
 import { IoSearch } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
+
+import { FaGoogle } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const Header = () => {
   const[showMenu,setShowMenu] = useState(false)
   const[showInput,setShowInput] = useState(false)
   const[visible,setVisible] = useState(false)
   const[color,setColor] = useState(false)
+  const[join,setJoin] = useState(false)
   const ChangeColor = () =>{
     if(window.scrollY>=400){
       setColor(true)
@@ -29,6 +33,7 @@ const Header = () => {
     }
   },[showMenu])
  
+  
    window.addEventListener('scroll',ChangeColor)
 
   return (
@@ -71,9 +76,11 @@ const Header = () => {
               
               <div className=' hidden xl:flex items-center gap-3 ml-auto  ' > 
                <Link to={'/payment'} className='font-bold py-3 px-6 text-white text-xl bg-red-500'>Donate</Link>
-               <Link to={'/'} className='font-bold py-3 px-6 text-white text-xl bg-blue-800'>Volunteer</Link>
+               <Link to={'/Login'}  className='font-bold py-3 px-6 text-white text-xl bg-blue-800'>Volunteer</Link>
               </div>
-      
+
+              
+
             </nav>
     </header>
   )

@@ -1,22 +1,24 @@
-import React from 'react'
+
 import Heading from '../Headings/Heading'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlinePlayCircle } from "react-icons/md";
-import causeImage from '../assets/causesimage.jpg'
+import causeImage from '../assets/causesimage.avif'
 import CauseComponent from './CauseComponent';
 import causearray from '../ContentArray/CauseInfo'
 import { Link } from 'react-router-dom';
 const Causes = () => {
   
   const CauseImg = () => {
-   return causearray.map((item)=>{
+   return causearray.slice(0,3).map((item)=>{
      return <CauseComponent heading={item.heading}
       donated={item.donated}
       goal={item.goal}
       percentage={item.percentage}
       image={item.image}
-      key={item.id}/>
+      key={item.id}
+      progress={item.percentage}
+      />
    }
    )
   }

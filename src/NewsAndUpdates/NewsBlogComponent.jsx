@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 import { CiClock2 } from "react-icons/ci";
 import { IoMdPerson } from "react-icons/io";

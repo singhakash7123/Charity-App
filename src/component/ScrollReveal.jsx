@@ -1,4 +1,4 @@
-import React, { Children, useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 const ScrollReveal = ({children,thresvalue}) => {
     const ref = useRef()

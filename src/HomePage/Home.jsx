@@ -1,4 +1,6 @@
-import React from 'react'
+
+
+
 import Header from '../Header/Header'
 import Hero from './Hero'
 import Agenda from './Agenda'
@@ -6,34 +8,38 @@ import Causes from './Causes'
 import Story from './Story'
 import Gallery from './Gallery'
 import Staff from './Staff'
-import ScrollReveal from '../component/ScrollReveal'
 import Blog from './Blog'
+import ScrollReveal from '../component/ScrollReveal'
+
+
+
 const Home = () => {
   return (
     <>
-    <Header/>
-   <Hero/>
+   <Header/>
+    <Hero/>
 
-   <ScrollReveal thresvalue={0.01} >
-    <Causes/>
-   </ScrollReveal>
+  <ScrollReveal thresvalue={0.05} >
+   <Causes/>
+  </ScrollReveal>
+
   
-
-    <ScrollReveal thresvalue={0.05} >
+  <ScrollReveal thresvalue={0.05} >
    <Story/>
-   </ScrollReveal>
+  </ScrollReveal>
 
-   <ScrollReveal thresvalue={0.05} >
+  <ScrollReveal thresvalue={0.05} >
    <Blog/>
-   </ScrollReveal>
+  </ScrollReveal>
 
-    <ScrollReveal thresvalue={0.05} >
+  <ScrollReveal thresvalue={0.05} >
    <Staff/>
-   </ScrollReveal>
+  </ScrollReveal>
 
-   <ScrollReveal thresvalue={0.05} >
+
+  <ScrollReveal thresvalue={0.05} >
    <Agenda/>
-   </ScrollReveal>
+  </ScrollReveal>
 
     <ScrollReveal thresvalue={0.05} >
    <Gallery/>
