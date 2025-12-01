@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import Heading from '../Headings/Heading'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
@@ -7,8 +7,11 @@ import causeImage from '../assets/causesimage.avif'
 import CauseComponent from './CauseComponent';
 import causearray from '../ContentArray/CauseInfo'
 import { Link } from 'react-router-dom';
+import { FaHeart } from "react-icons/fa";
 const Causes = () => {
   
+ const[favourite,setFavourite] = useState(false)
+
   const CauseImg = () => {
    return causearray.slice(0,3).map((item)=>{
      return <CauseComponent heading={item.heading}
@@ -18,6 +21,7 @@ const Causes = () => {
       image={item.image}
       key={item.id}
       progress={item.percentage}
+      description={item.description}
       />
    }
    )
@@ -45,16 +49,18 @@ const Causes = () => {
         lg:basis-11/20 p-[32px]
         lg:p-[48px] text-white ' >
         <h2 className='text-4xl font-bold' >Providing access of clean clothes, sanitised goods and essentials to needy peoples </h2>
-        <span className=' flex font-bold text-red-500 mt-6'>$45,278.00</span>
+        <span className=' flex font-bold text-red-500 mt-6'>₹45,278.00</span>
         <div className='w-full h-2 bg-red-500 mt-2' ></div>
         <div className='flex items-center justify-between mt-3 font-bold tracking-wide '>
           <span>150% Donation</span>
-          <span>Goal:$30,000.00</span>
+          <span>Goal:₹30,000.00</span>
         </div>
         <p className='text-white mt-6 font-light lg:text-2xl' >providing access to clean clothes for all weathers to people living in slum area for their healh comfort and dignity. Many of them lack seasonal clothesto cover their body from environmental issue. our motive to provide them the basic facility to survive </p>
         <div className='flex items-center justify-between mt-6' >
           <Link to={'/payment'} className='bg-orange-600 text-bold tracking-wider text-white py-2 px-4 font-bold lg:text-xl rounded-xl'>Donate Now</Link>
-          <button className='text-xl' ><FaRegHeart /></button>
+         <button onClick={()=>{setFavourite(!favourite)}} className={`text-xl ${favourite?'text-red-500':'text-white'}`} >{
+                 favourite?<FaHeart />:<FaRegHeart /> 
+                  }</button>
         </div>
         </div>
        
