@@ -41,11 +41,12 @@ const Footer = () => {
         <div className='flex-1  bg-gray-800  ' >
             <h3 className=' text-xl lg:text-2xl font-bold text-white'>Quick Links</h3>
             <ul className='text-white mt-8' >
-                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><span><IoIosArrowForward /></span>About The Organisation</li>
-                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><span><IoIosArrowForward /></span>Become a Volunteer</li>
-                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><span><IoIosArrowForward /></span>Case Studies</li>
-                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><span><IoIosArrowForward /></span>Sponsers</li>
-                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><span><IoIosArrowForward /></span>FAQ</li>
+               
+                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><Link className='flex items-center' to={'/news'} ><span><IoIosArrowForward /></span>About The Organisation</Link></li>
+                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><Link className='flex items-center' to={'/Login'} ><span><IoIosArrowForward /></span>Become a Volunteer</Link></li>
+                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><Link className='flex items-center' to={'/casestudies'} ><span><IoIosArrowForward /></span>Case Studies</Link></li>
+                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><Link className='flex items-center' to={'/'} ><span><IoIosArrowForward /></span>Sponsers</Link></li>
+                <li className='flex items-center text-[14px] lg:text-[15px] xl:text-[19px] font-semibold gap-x-4 border-b-2 border-gray-700 py-4'><Link className='flex items-center' to={'/'} ><span><IoIosArrowForward /></span>FAQ</Link></li>
             </ul>
         </div>
         <div className='flex-1  bg-gray-800  ' >

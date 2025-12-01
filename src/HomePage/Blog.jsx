@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import Heading from '../Headings/Heading'
 import HeadingButton from '../Headings/HeadingButton'
 import Newsimg1 from '../assets/Newsimg1.jpg'
@@ -16,7 +17,8 @@ const Blog  = () => {
         <Heading content='News And Updates'/>
         </div>
         <div className='w-full text-right'>
-        <HeadingButton content='READ THE BLOG' />
+          <Link to={'/news'} className='text-white  py-4 lg:py-5 px-8 lg:px-10 font-bold bg-blue-800 text-center text-xs xl:text-[16px] tracking-wide lg:tracking-[2px] ' >READ THE BLOG</Link>
+        
         </div>
         </div>
         <div className=' max-w-[1520px] w-full flex flex-col  md:flex-row md:flex-wrap items-center mt-15 justify-center ' >

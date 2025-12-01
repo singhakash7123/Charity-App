@@ -31,7 +31,7 @@ const Causes = () => {
        lg:pr-50 items-center px-5 '>
          <Heading content='Our Causes' />
         <div className='flex gap-x-2  items-center  self-end ' >
-            <button className='text-red-400 font-bold text-xl lg:text-2xl  flex items-center' >View All Causes</button>
+            <Link to={'/causes'} className='text-red-400 font-bold text-xl lg:text-2xl  flex items-center' >View All Causes</Link>
             <span  className='text-red-400 font-bold text-2xl flex items-center justify-center' ><FaArrowRightLong /></span>
         </div>
        </div>
