@@ -38,7 +38,7 @@ const Causes = () => {
        <div className='mt-10 flex flex-col lg:flex-row items-center lg:items-stretch  '>
         <div className=' min-h-[300px] lg:min-h-[436px] bg-red-400 w-99/100 lg:basis-9/20 relative before:h-full  before:w-full before:absolute before:left-0 before:top-0 before:bg-black before:opacity-40 before:content-[""] bg-center bg-cover' style={{backgroundImage:`url(${causeImage})`}} >
         
-        <button className='text-9xl text-white font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' ><MdOutlinePlayCircle /></button>
+        <a href='https://youtu.be/QYzcOvGwEcg' className='text-9xl text-white font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' ><MdOutlinePlayCircle /></a>
         
         </div>
          <div className='min-h-[400px] bg-gradient-to-tr from-blue-800 to-blue-500 w-full
